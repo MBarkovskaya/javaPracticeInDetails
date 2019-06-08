@@ -28,7 +28,7 @@ public class Exercise1 {
     }
 
     private static void isEven(int n) {
-        String res = "";
+        String res;
         if (n % 2 == 0) {
             res = "n is even";
         } else {
@@ -59,27 +59,27 @@ public class Exercise1 {
         return sum;
     }
 
-//    private static int sum2(int a, int b) {
-//        int sum = 0;
-//        if (a < 0 || b < 0) {
-//            throw new IllegalArgumentException("a or b less than zero");
-//
-//        }
-//        sum = sum(a, b, 0, 0);
-//        return sum;
-//    }
-//
-//    private static int sum(int a, int b, int x, int cnt) {
-//        if (x < a) {
-//            x += 1;
-//            sum(a, b, x, cnt);
-//        } else if (cnt < b) {
-//            cnt++;
-//            x += 1;
-//            sum(a, b, x, cnt);
-//        }
-//
-//        return x;
-//    }
+    private static int sum2(int a, int b) {
+        int sum = 0;
+        if (a < 0 || b < 0) {
+            throw new IllegalArgumentException("a or b less than zero");
+
+        }
+        sum = sum(a, b, 0, 0);
+        return sum;
+    }
+
+    private static int sum(int a, int b, int x, int cnt) {
+        if (x < a) {
+            x += 1;
+            sum(a, b, x, cnt);
+        } else if (cnt < b) {
+            cnt++;
+            x += 1;
+            sum(a, b, x, cnt);
+        }
+
+        return x;
+    }
 
 }
